@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ReflexÃ£o de Cultura | AndrÃ© Beschizza Group</title>
+<title>Reflexão de Cultura | André Beschizza Group</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
   :root {
@@ -131,13 +131,13 @@
 
 <div class="header">
   <div class="logo">AB</div>
-  <h1>AndrÃ© Beschizza Group</h1>
+  <h1>André Beschizza Group</h1>
 </div>
 
 <div class="progress-container" id="progressContainer" style="display:none">
   <div class="progress-info">
-    <span>PrincÃ­pio: <strong id="currentPrincipleName">â</strong></span>
-    <span><strong id="progressPercent">0%</strong> concluÃ­do</span>
+    <span>Princípio: <strong id="currentPrincipleName">—</strong></span>
+    <span><strong id="progressPercent">0%</strong> concluído</span>
   </div>
   <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill" style="width:0%"></div></div>
   <div class="tabs-container" id="tabsContainer"></div>
@@ -149,13 +149,13 @@
   <div class="screen active" id="welcomeScreen">
     <div class="welcome-card">
       <div class="icon">&#128173;</div>
-      <h2>Um Convite Ã  ReflexÃ£o</h2>
-      <p>Queremos convidar vocÃª para um momento de reflexÃ£o sincera sobre como vocÃª vive os princÃ­pios do AB Group no dia a dia. NÃ£o existem respostas certas ou erradas â apenas a sua percepÃ§Ã£o sobre quem vocÃª estÃ¡ sendo aqui dentro.</p>
+      <h2>Um Convite à Reflexão</h2>
+      <p>Queremos convidar você para um momento de reflexão sincera sobre como você vive os princípios do AB Group no dia a dia. Não existem respostas certas ou erradas — apenas a sua percepção sobre quem você está sendo aqui dentro.</p>
       <div class="info-box">
-        <p><strong>&#128337; Tempo estimado:</strong> 10â15 minutos</p>
-        <p><strong>&#128221; Formato:</strong> 25 perguntas reflexivas de mÃºltipla escolha</p>
+        <p><strong>&#128337; Tempo estimado:</strong> 10–15 minutos</p>
+        <p><strong>&#128221; Formato:</strong> 25 perguntas reflexivas de múltipla escolha</p>
         <p><strong>&#129504; Objetivo:</strong> Olhar para dentro com sinceridade</p>
-        <p><strong>&#128274; Suas respostas sÃ£o confidenciais</strong></p>
+        <p><strong>&#128274; Suas respostas são confidenciais</strong></p>
       </div>
       <div class="input-group">
         <label for="userName">Seu nome completo</label>
@@ -165,19 +165,19 @@
         <label for="userSector">Seu setor</label>
         <select id="userSector">
           <option value="">Selecione seu setor...</option>
-          <option>JurÃ­dico</option>
+          <option>Jurídico</option>
           <option>Comercial</option>
           <option>Atendimento</option>
           <option>Financeiro</option>
           <option>Marketing</option>
           <option>Administrativo</option>
           <option>Tecnologia</option>
-          <option>PÃ³s-Venda</option>
-          <option>RH / Gente &amp; GestÃ£o</option>
+          <option>Pós-Venda</option>
+          <option>RH / Gente &amp; Gestão</option>
           <option>Outro</option>
         </select>
       </div>
-      <button class="btn btn-primary" id="startBtn" onclick="startQuiz()" disabled>Iniciar ReflexÃ£o &#10145;</button>
+      <button class="btn btn-primary" id="startBtn" onclick="startQuiz()" disabled>Iniciar Reflexão &#10145;</button>
     </div>
   </div>
 
@@ -188,19 +188,19 @@
   <div class="screen" id="finishScreen">
     <div class="finish-card">
       <div class="check-icon">&#10003;</div>
-      <h2>Obrigado pela sua reflexÃ£o!</h2>
-      <p>Suas respostas foram registradas. Guarde esse momento de sinceridade â ele Ã© o primeiro passo para qualquer mudanÃ§a real.</p>
+      <h2>Obrigado pela sua reflexão!</h2>
+      <p>Suas respostas foram registradas. Guarde esse momento de sinceridade — ele é o primeiro passo para qualquer mudança real.</p>
     </div>
 
     <div class="report-card" id="reportCard">
-      <h3>&#128202; Seu RelatÃ³rio de ReflexÃ£o</h3>
+      <h3>&#128202; Seu Relatório de Reflexão</h3>
       <div id="reportUserInfo" style="text-align:center;margin-bottom:20px;font-size:13px;color:var(--gt)"></div>
       <div class="score-overall" id="scoreOverall"></div>
       <div id="principleScores"></div>
     </div>
 
     <div class="export-section">
-      <button class="btn btn-pdf" onclick="exportPDF()">&#128196; Salvar RelatÃ³rio em PDF</button>
+      <button class="btn btn-pdf" onclick="exportPDF()">&#128196; Salvar Relatório em PDF</button>
       <button class="btn btn-export" onclick="exportJSON()">&#128229; Exportar JSON (Admin)</button>
       <button class="btn btn-export" onclick="exportAllCSV()">&#128229; Exportar CSV (Admin)</button>
     </div>
@@ -209,7 +209,7 @@
       <h3>&#128202; Painel de Dados (Administrador)</h3>
       <div style="text-align:center">
         <div class="responses-count" id="totalResponses">0</div>
-        <div class="responses-label">respostas armazenadas nesta sessÃ£o</div>
+        <div class="responses-label">respostas armazenadas nesta sessão</div>
       </div>
       <div class="admin-buttons">
         <button class="btn btn-secondary" onclick="viewResponses()">&#128065; Ver Todas</button>
@@ -229,48 +229,48 @@ const principles = [
     id:'coragem', name:'CORAGEM', color:'#dc2626',
     questions: [
       {
-        text:'Quando surge uma nova iniciativa na empresa â um processo diferente, uma ferramenta nova, uma mudanÃ§a de rota â qual Ã© a sua reaÃ§Ã£o mais sincera?',
+        text:'Quando surge uma nova iniciativa na empresa — um processo diferente, uma ferramenta nova, uma mudança de rota — qual é a sua reação mais sincera?',
         options:[
-          {text:'Minha primeira reaÃ§Ã£o Ã© resistir. Penso "por que mudar se jÃ¡ funciona assim?"', score:1},
-          {text:'Fico desconfortÃ¡vel, mas aceito porque nÃ£o tenho escolha', score:2},
-          {text:'Aceito a mudanÃ§a, embora internamente prefira a forma antiga', score:3},
-          {text:'Encaro como oportunidade. Se a empresa estÃ¡ mudando, eu preciso mudar junto â ou Ã  frente', score:4}
+          {text:'Minha primeira reação é resistir. Penso "por que mudar se já funciona assim?"', score:1},
+          {text:'Fico desconfortável, mas aceito porque não tenho escolha', score:2},
+          {text:'Aceito a mudança, embora internamente prefira a forma antiga', score:3},
+          {text:'Encaro como oportunidade. Se a empresa está mudando, eu preciso mudar junto — ou à frente', score:4}
         ]
       },
       {
-        text:'Pense na Ãºltima vez que vocÃª percebeu algo errado em um processo ou decisÃ£o. O que vocÃª fez de verdade?',
+        text:'Pense na última vez que você percebeu algo errado em um processo ou decisão. O que você fez de verdade?',
         options:[
-          {text:'Preferi nÃ£o me envolver â nÃ£o Ã© minha responsabilidade', score:1},
-          {text:'Comentei com colegas nos bastidores, mas nÃ£o levei adiante', score:2},
+          {text:'Preferi não me envolver — não é minha responsabilidade', score:1},
+          {text:'Comentei com colegas nos bastidores, mas não levei adiante', score:2},
           {text:'Pensei em falar, mas tive receio de como seria recebido', score:3},
-          {text:'Falei abertamente, apresentei o problema com dados e propus uma soluÃ§Ã£o', score:4}
+          {text:'Falei abertamente, apresentei o problema com dados e propus uma solução', score:4}
         ]
       },
       {
-        text:'Seja sincero(a): vocÃª sente que hoje estÃ¡ na zona de conforto dentro da empresa?',
+        text:'Seja sincero(a): você sente que hoje está na zona de conforto dentro da empresa?',
         options:[
-          {text:'Sim. FaÃ§o o que Ã© pedido e nÃ£o busco ir alÃ©m â me sinto confortÃ¡vel assim', score:1},
-          {text:'ReconheÃ§o que estou acomodado(a) em algumas Ã¡reas do meu trabalho', score:2},
-          {text:'Saio da zona de conforto de vez em quando, mas nÃ£o Ã© um hÃ¡bito', score:3},
-          {text:'Busco ativamente desafios novos. Conforto demais Ã© sinal de estagnaÃ§Ã£o', score:4}
+          {text:'Sim. Faço o que é pedido e não busco ir além — me sinto confortável assim', score:1},
+          {text:'Reconheço que estou acomodado(a) em algumas áreas do meu trabalho', score:2},
+          {text:'Saio da zona de conforto de vez em quando, mas não é um hábito', score:3},
+          {text:'Busco ativamente desafios novos. Conforto demais é sinal de estagnação', score:4}
         ]
       },
       {
-        text:'Quando um cliente ou colega precisa ouvir uma verdade difÃ­cil, como vocÃª se comporta?',
+        text:'Quando um cliente ou colega precisa ouvir uma verdade difícil, como você se comporta?',
         options:[
-          {text:'Prefiro omitir para nÃ£o causar desconforto', score:1},
-          {text:'Dou uma versÃ£o suavizada da realidade para agradar', score:2},
-          {text:'Falo a verdade, mas sÃ³ quando perguntado(a) diretamente', score:3},
-          {text:'Falo a verdade com respeito e dados, mesmo que nÃ£o seja o que a pessoa quer ouvir', score:4}
+          {text:'Prefiro omitir para não causar desconforto', score:1},
+          {text:'Dou uma versão suavizada da realidade para agradar', score:2},
+          {text:'Falo a verdade, mas só quando perguntado(a) diretamente', score:3},
+          {text:'Falo a verdade com respeito e dados, mesmo que não seja o que a pessoa quer ouvir', score:4}
         ]
       },
       {
-        text:'Imagine que amanhÃ£ surgisse uma oportunidade totalmente nova dentro do AB Group â algo fora da sua funÃ§Ã£o atual, que exigisse aprender do zero. Como vocÃª reagiria?',
+        text:'Imagine que amanhã surgisse uma oportunidade totalmente nova dentro do AB Group — algo fora da sua função atual, que exigisse aprender do zero. Como você reagiria?',
         options:[
-          {text:'Prefiro ficar onde estou. JÃ¡ sei o que faÃ§o e nÃ£o quero arriscar', score:1},
+          {text:'Prefiro ficar onde estou. Já sei o que faço e não quero arriscar', score:1},
           {text:'Ficaria curioso(a), mas o medo de errar me travaria', score:2},
-          {text:'Consideraria, mas sÃ³ se alguÃ©m me garantisse que daria certo', score:3},
-          {text:'Levantaria a mÃ£o na hora. Crescer dÃ³i, mas ficar parado Ã© pior', score:4}
+          {text:'Consideraria, mas só se alguém me garantisse que daria certo', score:3},
+          {text:'Levantaria a mão na hora. Crescer dói, mas ficar parado é pior', score:4}
         ]
       }
     ]
@@ -279,48 +279,48 @@ const principles = [
     id:'disciplina', name:'DISCIPLINA', color:'#2563eb',
     questions: [
       {
-        text:'Quando surge um obstÃ¡culo no meio de uma tarefa â um sistema lento, uma informaÃ§Ã£o que falta, um processo burocrÃ¡tico â o que vocÃª costuma fazer primeiro?',
+        text:'Quando surge um obstáculo no meio de uma tarefa — um sistema lento, uma informação que falta, um processo burocrático — o que você costuma fazer primeiro?',
         options:[
-          {text:'Reclamo. Uso o obstÃ¡culo como justificativa para nÃ£o entregar no prazo', score:1},
+          {text:'Reclamo. Uso o obstáculo como justificativa para não entregar no prazo', score:1},
           {text:'Fico frustrado(a) e perco tempo reclamando antes de agir', score:2},
-          {text:'Tento resolver, mas se for muito difÃ­cil, espero alguÃ©m desbloquear', score:3},
-          {text:'Busco uma saÃ­da imediatamente. ObstÃ¡culo nÃ£o Ã© desculpa â Ã© parte do jogo', score:4}
+          {text:'Tento resolver, mas se for muito difícil, espero alguém desbloquear', score:3},
+          {text:'Busco uma saída imediatamente. Obstáculo não é desculpa — é parte do jogo', score:4}
         ]
       },
       {
-        text:'Quando ninguÃ©m estÃ¡ supervisionando seu trabalho â lÃ­der em reuniÃ£o, dia mais tranquilo â o que acontece com a sua entrega?',
+        text:'Quando ninguém está supervisionando seu trabalho — líder em reunião, dia mais tranquilo — o que acontece com a sua entrega?',
         options:[
           {text:'Sendo sincero(a), reduzo o ritmo e a qualidade cai', score:1},
-          {text:'Mantenho o bÃ¡sico, mas nÃ£o me esforÃ§o nos detalhes', score:2},
-          {text:'A qualidade se mantÃ©m boa, mas reconheÃ§o que poderia ser mais atento(a)', score:3},
-          {text:'FaÃ§o bem feito independente de quem estÃ¡ olhando â Ã© uma questÃ£o de carÃ¡ter, nÃ£o de vigilÃ¢ncia', score:4}
+          {text:'Mantenho o básico, mas não me esforço nos detalhes', score:2},
+          {text:'A qualidade se mantém boa, mas reconheço que poderia ser mais atento(a)', score:3},
+          {text:'Faço bem feito independente de quem está olhando — é uma questão de caráter, não de vigilância', score:4}
         ]
       },
       {
-        text:'Reflita sobre as suas reclamaÃ§Ãµes do dia a dia. Com que frequÃªncia vocÃª transforma uma reclamaÃ§Ã£o em aÃ§Ã£o concreta?',
+        text:'Reflita sobre as suas reclamações do dia a dia. Com que frequência você transforma uma reclamação em ação concreta?',
         options:[
-          {text:'ReconheÃ§o que reclamo bastante, mas raramente parto para a aÃ§Ã£o', score:1},
-          {text:'Reclamo primeiro, e sÃ³ depois penso se posso fazer algo', score:2},
-          {text:'Tento equilibrar, mas Ã s vezes a reclamaÃ§Ã£o ganha mais espaÃ§o do que deveria', score:3},
-          {text:'Para cada problema que identifico, trago junto uma proposta de soluÃ§Ã£o. Reclamar sem agir Ã© perda de tempo', score:4}
+          {text:'Reconheço que reclamo bastante, mas raramente parto para a ação', score:1},
+          {text:'Reclamo primeiro, e só depois penso se posso fazer algo', score:2},
+          {text:'Tento equilibrar, mas às vezes a reclamação ganha mais espaço do que deveria', score:3},
+          {text:'Para cada problema que identifico, trago junto uma proposta de solução. Reclamar sem agir é perda de tempo', score:4}
         ]
       },
       {
-        text:'Se alguÃ©m pedisse para ver seus registros no sistema (ADVBOX, CRM) agora mesmo, o que encontraria?',
+        text:'Se alguém pedisse para ver seus registros no sistema (ADVBOX, CRM) agora mesmo, o que encontraria?',
         options:[
-          {text:'Provavelmente faltam vÃ¡rios registros e informaÃ§Ãµes', score:1},
-          {text:'Alguns estÃ£o em dia, outros nem tanto', score:2},
-          {text:'A maioria estÃ¡ atualizada, com falhas pontuais', score:3},
-          {text:'Tudo registrado, organizado e em dia â registro Ã© parte da minha disciplina diÃ¡ria', score:4}
+          {text:'Provavelmente faltam vários registros e informações', score:1},
+          {text:'Alguns estão em dia, outros nem tanto', score:2},
+          {text:'A maioria está atualizada, com falhas pontuais', score:3},
+          {text:'Tudo registrado, organizado e em dia — registro é parte da minha disciplina diária', score:4}
         ]
       },
       {
-        text:'Quantas vezes nas Ãºltimas semanas vocÃª colocou um obstÃ¡culo ou uma reclamaÃ§Ã£o na frente de algo que precisava ser feito?',
+        text:'Quantas vezes nas últimas semanas você colocou um obstáculo ou uma reclamação na frente de algo que precisava ser feito?',
         options:[
           {text:'Mais vezes do que gostaria de admitir', score:1},
-          {text:'Algumas vezes â especialmente quando a tarefa era difÃ­cil ou chata', score:2},
+          {text:'Algumas vezes — especialmente quando a tarefa era difícil ou chata', score:2},
           {text:'Poucas vezes, mas aconteceu', score:3},
-          {text:'Nenhuma. FaÃ§o primeiro, questiono depois. O que precisa ser feito, se faz', score:4}
+          {text:'Nenhuma. Faço primeiro, questiono depois. O que precisa ser feito, se faz', score:4}
         ]
       }
     ]
@@ -329,48 +329,48 @@ const principles = [
     id:'lealdade', name:'LEALDADE', color:'#7c3aed',
     questions: [
       {
-        text:'Quando surge uma insatisfaÃ§Ã£o sua com a empresa ou com uma decisÃ£o da lideranÃ§a, o que vocÃª faz?',
+        text:'Quando surge uma insatisfação sua com a empresa ou com uma decisão da liderança, o que você faz?',
         options:[
           {text:'Comento nos bastidores com colegas, reclamo no privado', score:1},
-          {text:'Fico desconfortÃ¡vel, mas engulo e nÃ£o falo com ninguÃ©m que possa resolver', score:2},
-          {text:'Busco entender o contexto, mas Ã s vezes desisto de levar adiante', score:3},
+          {text:'Fico desconfortável, mas engulo e não falo com ninguém que possa resolver', score:2},
+          {text:'Busco entender o contexto, mas às vezes desisto de levar adiante', score:3},
           {text:'Falo diretamente com quem pode resolver, com respeito e foco no bem do grupo', score:4}
         ]
       },
       {
-        text:'Reflita sobre suas conversas fora do horÃ¡rio de trabalho. VocÃª fala da empresa e dos colegas da mesma forma quando eles NÃO estÃ£o presentes?',
+        text:'Reflita sobre suas conversas fora do horário de trabalho. Você fala da empresa e dos colegas da mesma forma quando eles NÃO estão presentes?',
         options:[
-          {text:'ReconheÃ§o que Ã s vezes mudo o discurso dependendo de quem estÃ¡ ouvindo', score:1},
-          {text:'Em momentos de frustraÃ§Ã£o, desabafo de uma forma que nÃ£o faria na frente de todos', score:2},
-          {text:'Na maioria das vezes sim, mas jÃ¡ escorreguei', score:3},
-          {text:'Minha postura Ã© a mesma em qualquer contexto. NÃ£o falo de ninguÃ©m o que nÃ£o falaria na cara', score:4}
+          {text:'Reconheço que às vezes mudo o discurso dependendo de quem está ouvindo', score:1},
+          {text:'Em momentos de frustração, desabafo de uma forma que não faria na frente de todos', score:2},
+          {text:'Na maioria das vezes sim, mas já escorreguei', score:3},
+          {text:'Minha postura é a mesma em qualquer contexto. Não falo de ninguém o que não falaria na cara', score:4}
         ]
       },
       {
-        text:'Quando a lideranÃ§a toma uma decisÃ£o que exige mais esforÃ§o da equipe, como vocÃª reage de verdade?',
+        text:'Quando a liderança toma uma decisão que exige mais esforço da equipe, como você reage de verdade?',
         options:[
-          {text:'Reclamo com os colegas e faÃ§o o mÃ­nimo necessÃ¡rio', score:1},
-          {text:'FaÃ§o o que foi pedido, mas sem entusiasmo e demonstrando insatisfaÃ§Ã£o', score:2},
+          {text:'Reclamo com os colegas e faço o mínimo necessário', score:1},
+          {text:'Faço o que foi pedido, mas sem entusiasmo e demonstrando insatisfação', score:2},
           {text:'Apoio, mas internamente questiono se vale a pena', score:3},
-          {text:'Entendo o "onde queremos chegar", apoio ativamente e me empenho â mesmo quando Ã© difÃ­cil', score:4}
+          {text:'Entendo o "onde queremos chegar", apoio ativamente e me empenho — mesmo quando é difícil', score:4}
         ]
       },
       {
-        text:'Quando hÃ¡ um conflito entre seus interesses pessoais e o propÃ³sito coletivo do grupo, como vocÃª age?',
+        text:'Quando há um conflito entre seus interesses pessoais e o propósito coletivo do grupo, como você age?',
         options:[
-          {text:'Priorizo meus interesses â no final, cada um cuida de si', score:1},
-          {text:'Depende da situaÃ§Ã£o: se me prejudica muito, priorizo o meu', score:2},
-          {text:'Busco equilÃ­brio, mas quando necessÃ¡rio abro mÃ£o do pessoal', score:3},
-          {text:'O propÃ³sito coletivo vem primeiro de forma consistente. Estou aqui por algo maior que eu', score:4}
+          {text:'Priorizo meus interesses — no final, cada um cuida de si', score:1},
+          {text:'Depende da situação: se me prejudica muito, priorizo o meu', score:2},
+          {text:'Busco equilíbrio, mas quando necessário abro mão do pessoal', score:3},
+          {text:'O propósito coletivo vem primeiro de forma consistente. Estou aqui por algo maior que eu', score:4}
         ]
       },
       {
-        text:'Agora, uma reflexÃ£o mais profunda: E se vocÃª nÃ£o tivesse esse trabalho? E se essa vaga nÃ£o existisse mais amanhÃ£? VocÃª sente que estÃ¡ honrando a oportunidade que tem?',
+        text:'Agora, uma reflexão mais profunda: E se você não tivesse esse trabalho? E se essa vaga não existisse mais amanhã? Você sente que está honrando a oportunidade que tem?',
         options:[
-          {text:'Sendo sincero(a), acho que nÃ£o tenho valorizado como deveria', score:1},
-          {text:'Ãs vezes esqueÃ§o de valorizar e ajo no automÃ¡tico, como se fosse garantido', score:2},
-          {text:'Valorizo, mas reconheÃ§o que poderia me dedicar mais', score:3},
-          {text:'Cada dia aqui Ã© uma oportunidade que eu trato com seriedade. Dou o meu melhor porque sei o valor disso', score:4}
+          {text:'Sendo sincero(a), acho que não tenho valorizado como deveria', score:1},
+          {text:'Às vezes esqueço de valorizar e ajo no automático, como se fosse garantido', score:2},
+          {text:'Valorizo, mas reconheço que poderia me dedicar mais', score:3},
+          {text:'Cada dia aqui é uma oportunidade que eu trato com seriedade. Dou o meu melhor porque sei o valor disso', score:4}
         ]
       }
     ]
@@ -379,48 +379,48 @@ const principles = [
     id:'trabalho-equipe', name:'TRABALHO EM EQUIPE', color:'#059669',
     questions: [
       {
-        text:'Quando um colega de OUTRO setor pede sua ajuda, mesmo que vocÃª esteja ocupado(a), como costuma reagir?',
+        text:'Quando um colega de OUTRO setor pede sua ajuda, mesmo que você esteja ocupado(a), como costuma reagir?',
         options:[
-          {text:'Cada setor cuida do seu. NÃ£o Ã© minha responsabilidade', score:1},
-          {text:'Ajudo se for rÃ¡pido, mas se exigir tempo, digo que nÃ£o posso', score:2},
-          {text:'Busco ajudar quando possÃ­vel, reorganizando minha agenda', score:3},
-          {text:'Paro, entendo a necessidade e colaboro â quando um avanÃ§a, todos avanÃ§am', score:4}
+          {text:'Cada setor cuida do seu. Não é minha responsabilidade', score:1},
+          {text:'Ajudo se for rápido, mas se exigir tempo, digo que não posso', score:2},
+          {text:'Busco ajudar quando possível, reorganizando minha agenda', score:3},
+          {text:'Paro, entendo a necessidade e colaboro — quando um avança, todos avançam', score:4}
         ]
       },
       {
-        text:'Quando alguÃ©m propÃµe uma ideia nova ou uma forma diferente de fazer algo, qual Ã© a sua primeira reaÃ§Ã£o interna?',
+        text:'Quando alguém propõe uma ideia nova ou uma forma diferente de fazer algo, qual é a sua primeira reação interna?',
         options:[
-          {text:'"Mais uma mudanÃ§a... isso nÃ£o vai funcionar"', score:1},
-          {text:'"Vamos ver... mas provavelmente nÃ£o vai dar certo"', score:2},
-          {text:'Escuto com abertura, embora Ã s vezes prefira manter como estÃ¡', score:3},
-          {text:'OuÃ§o, contribuo e ajudo a testar. InovaÃ§Ã£o sÃ³ nasce quando alguÃ©m abre espaÃ§o para o novo', score:4}
+          {text:'"Mais uma mudança... isso não vai funcionar"', score:1},
+          {text:'"Vamos ver... mas provavelmente não vai dar certo"', score:2},
+          {text:'Escuto com abertura, embora às vezes prefira manter como está', score:3},
+          {text:'Ouço, contribuo e ajudo a testar. Inovação só nasce quando alguém abre espaço para o novo', score:4}
         ]
       },
       {
-        text:'Quando um setor vizinho estÃ¡ com dificuldade e isso nÃ£o afeta diretamente o seu trabalho, o que vocÃª faz?',
+        text:'Quando um setor vizinho está com dificuldade e isso não afeta diretamente o seu trabalho, o que você faz?',
         options:[
-          {text:'NÃ£o Ã© minha responsabilidade â cada setor resolve o seu', score:1},
-          {text:'Percebo, mas espero alguÃ©m tomar a iniciativa', score:2},
-          {text:'OfereÃ§o ajuda se for algo simples', score:3},
-          {text:'Me envolvo, compartilho dados e busco resolver juntos â sem barreiras entre setores', score:4}
+          {text:'Não é minha responsabilidade — cada setor resolve o seu', score:1},
+          {text:'Percebo, mas espero alguém tomar a iniciativa', score:2},
+          {text:'Ofereço ajuda se for algo simples', score:3},
+          {text:'Me envolvo, compartilho dados e busco resolver juntos — sem barreiras entre setores', score:4}
         ]
       },
       {
-        text:'Como vocÃª se comporta quando um colega recebe destaque por algo que tambÃ©m teve a sua contribuiÃ§Ã£o?',
+        text:'Como você se comporta quando um colega recebe destaque por algo que também teve a sua contribuição?',
         options:[
-          {text:'Fico incomodado(a) e sinto que fui injustiÃ§ado(a)', score:1},
-          {text:'Sinto um desconforto, mas nÃ£o falo nada', score:2},
+          {text:'Fico incomodado(a) e sinto que fui injustiçado(a)', score:1},
+          {text:'Sinto um desconforto, mas não falo nada', score:2},
           {text:'Fico feliz pelo colega, embora pense que poderia ter sido citado(a)', score:3},
-          {text:'Comemoro a vitÃ³ria. O resultado da equipe importa mais que o reconhecimento individual', score:4}
+          {text:'Comemoro a vitória. O resultado da equipe importa mais que o reconhecimento individual', score:4}
         ]
       },
       {
-        text:'Pense em quantas vezes nos Ãºltimos dias vocÃª criou ou reforÃ§ou uma barreira entre setores â mesmo que sem querer â dizendo "isso nÃ£o Ã© comigo" ou "esse problema Ã© deles".',
+        text:'Pense em quantas vezes nos últimos dias você criou ou reforçou uma barreira entre setores — mesmo que sem querer — dizendo "isso não é comigo" ou "esse problema é deles".',
         options:[
-          {text:'FaÃ§o isso com mais frequÃªncia do que deveria', score:1},
-          {text:'JÃ¡ disse isso algumas vezes, por frustraÃ§Ã£o ou sobrecarga', score:2},
-          {text:'Raramente, mas jÃ¡ aconteceu', score:3},
-          {text:'NÃ£o faÃ§o isso. Se o problema existe, Ã© de todos nÃ³s. Nada grande se constrÃ³i sozinho', score:4}
+          {text:'Faço isso com mais frequência do que deveria', score:1},
+          {text:'Já disse isso algumas vezes, por frustração ou sobrecarga', score:2},
+          {text:'Raramente, mas já aconteceu', score:3},
+          {text:'Não faço isso. Se o problema existe, é de todos nós. Nada grande se constrói sozinho', score:4}
         ]
       }
     ]
@@ -429,57 +429,57 @@ const principles = [
     id:'resultado', name:'RESULTADO', color:'#d97706',
     questions: [
       {
-        text:'No seu dia a dia, vocÃª sente que o seu trabalho gera VALOR REAL â que muda a realidade de alguÃ©m â ou estÃ¡ mais no modo "cumprir tarefas e receber o salÃ¡rio"?',
+        text:'No seu dia a dia, você sente que o seu trabalho gera VALOR REAL — que muda a realidade de alguém — ou está mais no modo "cumprir tarefas e receber o salário"?',
         options:[
           {text:'Sendo sincero(a), estou mais no modo "cumprir tarefas e garantir o fixo"', score:1},
           {text:'Cumpro bem as tarefas, mas nem sempre penso no impacto final para o cliente', score:2},
           {text:'Busco gerar valor, mas em dias corridos o foco se perde e viro executor', score:3},
-          {text:'Cada tarefa que faÃ§o Ã© pensada no impacto que vai gerar. NÃ£o estou aqui sÃ³ pelo salÃ¡rio â estou aqui para transformar vidas', score:4}
+          {text:'Cada tarefa que faço é pensada no impacto que vai gerar. Não estou aqui só pelo salário — estou aqui para transformar vidas', score:4}
         ]
       },
       {
-        text:'VocÃª jÃ¡ pensou em criar ou propor algo novo dentro do AB Group â uma melhoria, um projeto, uma iniciativa â ou espera que as coisas venham prontas da lideranÃ§a?',
+        text:'Você já pensou em criar ou propor algo novo dentro do AB Group — uma melhoria, um projeto, uma iniciativa — ou espera que as coisas venham prontas da liderança?',
         options:[
-          {text:'Nunca pensei nisso. Minha funÃ§Ã£o Ã© executar o que me pedem', score:1},
-          {text:'JÃ¡ tive ideias, mas nunca levei adiante â achei que nÃ£o era meu papel', score:2},
-          {text:'Penso nisso Ã s vezes, mas falta coragem ou nÃ£o sei por onde comeÃ§ar', score:3},
-          {text:'Penso como dono. Trago ideias, proponho melhorias e busco novos caminhos â empreendo de dentro', score:4}
+          {text:'Nunca pensei nisso. Minha função é executar o que me pedem', score:1},
+          {text:'Já tive ideias, mas nunca levei adiante — achei que não era meu papel', score:2},
+          {text:'Penso nisso às vezes, mas falta coragem ou não sei por onde começar', score:3},
+          {text:'Penso como dono. Trago ideias, proponho melhorias e busco novos caminhos — empreendo de dentro', score:4}
         ]
       },
       {
-        text:'Como vocÃª lida com a responsabilidade sobre os seus prÃ³prios resultados quando a meta nÃ£o Ã© atingida?',
+        text:'Como você lida com a responsabilidade sobre os seus próprios resultados quando a meta não é atingida?',
         options:[
           {text:'Aponto os fatores externos que me impediram: sistema, equipe, prazo, processo', score:1},
-          {text:'Assumo parte, mas reconheÃ§o que as circunstÃ¢ncias atrapalham muito', score:2},
+          {text:'Assumo parte, mas reconheço que as circunstâncias atrapalham muito', score:2},
           {text:'Assumo a responsabilidade na maioria das vezes e busco melhorar', score:3},
-          {text:'100% minha responsabilidade. Sem desculpas, sem transferÃªncia de culpa. Se nÃ£o atingi, preciso mudar algo em mim', score:4}
+          {text:'100% minha responsabilidade. Sem desculpas, sem transferência de culpa. Se não atingi, preciso mudar algo em mim', score:4}
         ]
       },
       {
-        text:'Agora, uma reflexÃ£o dura: se o AB Group dependesse apenas do SEU nÃ­vel de entrega para sobreviver, a empresa cresceria, se manteria ou quebraria?',
+        text:'Agora, uma reflexão dura: se o AB Group dependesse apenas do SEU nível de entrega para sobreviver, a empresa cresceria, se manteria ou quebraria?',
         options:[
           {text:'Sendo muito sincero(a)... provavelmente teria dificuldades', score:1},
           {text:'Se manteria, mas sem crescer', score:2},
           {text:'Cresceria de forma moderada', score:3},
-          {text:'Cresceria. Eu dou tudo de mim porque sei que meu resultado constrÃ³i o resultado de todos', score:4}
+          {text:'Cresceria. Eu dou tudo de mim porque sei que meu resultado constrói o resultado de todos', score:4}
         ]
       },
       {
-        text:'Ãltima reflexÃ£o: E se vocÃª nÃ£o tivesse nenhuma outra opÃ§Ã£o de trabalho? Se esse fosse o Ãºnico lugar possÃ­vel para vocÃª construir sua carreira e seu futuro â vocÃª estaria agindo diferente do que age hoje?',
+        text:'Última reflexão: E se você não tivesse nenhuma outra opção de trabalho? Se esse fosse o único lugar possível para você construir sua carreira e seu futuro — você estaria agindo diferente do que age hoje?',
         options:[
           {text:'Sim, estaria me dedicando muito mais do que me dedico hoje', score:1},
-          {text:'Provavelmente sim â me esforÃ§aria mais em algumas Ã¡reas', score:2},
-          {text:'Talvez um pouco mais, mas jÃ¡ me esforÃ§o bastante', score:3},
-          {text:'NÃ£o mudaria nada. JÃ¡ trato cada dia aqui como se fosse a oportunidade da minha vida â porque Ã©', score:4}
+          {text:'Provavelmente sim — me esforçaria mais em algumas áreas', score:2},
+          {text:'Talvez um pouco mais, mas já me esforço bastante', score:3},
+          {text:'Não mudaria nada. Já trato cada dia aqui como se fosse a oportunidade da minha vida — porque é', score:4}
         ]
       }
     ]
   }
 ];
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // STATE
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 let currentPrinciple=0, currentQuestion=0;
 let answers={}, allResponses=[];
 
@@ -487,9 +487,9 @@ principles.forEach(p=>{answers[p.id]=new Array(p.questions.length).fill(null)});
 
 try{const s=JSON.parse(sessionStorage.getItem('abg_resp2')||'[]');if(Array.isArray(s))allResponses=s}catch(e){}
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // INIT
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 document.getElementById('userName').addEventListener('input',checkStart);
 document.getElementById('userSector').addEventListener('change',checkStart);
 function checkStart(){
@@ -504,9 +504,9 @@ function startQuiz(){
   buildTabs();renderQuestion();
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // TABS & PROGRESS
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 function buildTabs(){
   document.getElementById('tabsContainer').innerHTML=principles.map((p,i)=>
     `<div class="tab" id="tab-${i}">${p.name}</div>`
@@ -527,9 +527,9 @@ function updateProgress(){
   });
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // RENDER
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 function renderQuestion(){
   const screen=document.getElementById('quizScreen');
   const p=principles[currentPrinciple];
@@ -542,7 +542,7 @@ function renderQuestion(){
   screen.innerHTML=`
     <div class="question-card">
       <div class="question-badge" style="background:${p.color}15;color:${p.color}">${p.name}</div>
-      <div class="question-number">ReflexÃ£o ${globalQ} de ${totalGlobalQ}</div>
+      <div class="question-number">Reflexão ${globalQ} de ${totalGlobalQ}</div>
       <div class="question-text">${q.text}</div>
       <div class="options">
         ${q.options.map((opt,i)=>`
@@ -556,7 +556,7 @@ function renderQuestion(){
     <div class="nav-buttons">
       ${(currentPrinciple>0||currentQuestion>0)?'<button class="btn btn-secondary" onclick="goBack()">&#8592; Voltar</button>':''}
       <button class="btn btn-primary" onclick="goNext()" ${sel===null?'disabled':''}>
-        ${currentPrinciple===principles.length-1&&currentQuestion===p.questions.length-1?'Finalizar &#10003;':'PrÃ³xima &#10145;'}
+        ${currentPrinciple===principles.length-1&&currentQuestion===p.questions.length-1?'Finalizar &#10003;':'Próxima &#10145;'}
       </button>
     </div>`;
 }
@@ -566,9 +566,9 @@ function selectOption(i){
   renderQuestion();
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // NAV
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 function goNext(){
   const p=principles[currentPrinciple];
   if(currentQuestion<p.questions.length-1){currentQuestion++;renderQuestion();return}
@@ -580,9 +580,9 @@ function goBack(){
   if(currentPrinciple>0){currentPrinciple--;currentQuestion=principles[currentPrinciple].questions.length-1;renderQuestion()}
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // FINISH & REPORT
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 function finishQuiz(){
   const resp={
     id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),
@@ -604,7 +604,7 @@ function finishQuiz(){
       const sel=answers[p.id][i];
       const score=sel!==null?q.options[sel].score:0;
       pScore+=score;totalScore+=score;
-      respostas.push({pergunta:q.text,resposta:sel!==null?q.options[sel].text:'â',pontos:score,max:4});
+      respostas.push({pergunta:q.text,resposta:sel!==null?q.options[sel].text:'—',pontos:score,max:4});
     });
 
     resp.principios[p.id]={respostas,pontos:pScore,max:pMax,percentual:Math.round(pScore/pMax*100)};
@@ -626,14 +626,14 @@ function finishQuiz(){
 
 function buildReport(r){
   document.getElementById('reportUserInfo').innerHTML=
-    `<strong>${r.nome}</strong> â ${r.setor}<br><span style="font-size:11px">${new Date(r.timestamp).toLocaleString('pt-BR')}</span>`;
+    `<strong>${r.nome}</strong> — ${r.setor}<br><span style="font-size:11px">${new Date(r.timestamp).toLocaleString('pt-BR')}</span>`;
 
   const pct=r.resumo.percentual;
   let msg='',msgColor='';
   if(pct>=85){msg='Alinhamento Forte com a Cultura';msgColor='#22c55e'}
-  else if(pct>=65){msg='Bom Alinhamento â HÃ¡ EspaÃ§o para Crescer';msgColor='#3b82f6'}
-  else if(pct>=45){msg='Alinhamento Parcial â Momento de ReflexÃ£o';msgColor='#f59e0b'}
-  else{msg='Oportunidade de ReconexÃ£o com os PrincÃ­pios';msgColor='#ef4444'}
+  else if(pct>=65){msg='Bom Alinhamento — Há Espaço para Crescer';msgColor='#3b82f6'}
+  else if(pct>=45){msg='Alinhamento Parcial — Momento de Reflexão';msgColor='#f59e0b'}
+  else{msg='Oportunidade de Reconexão com os Princípios';msgColor='#ef4444'}
 
   document.getElementById('scoreOverall').innerHTML=`
     <div class="big-score">${r.resumo.pontos}/${r.resumo.max}</div>
@@ -645,10 +645,10 @@ function buildReport(r){
     const d=r.principios[p.id];
     const barColor=d.percentual>=75?'#22c55e':d.percentual>=50?'#3b82f6':d.percentual>=35?'#f59e0b':'#ef4444';
     let levelText='';
-    if(d.percentual>=85) levelText='VocÃª demonstra forte alinhamento com este princÃ­pio.';
-    else if(d.percentual>=65) levelText='Bom nÃ­vel de prÃ¡tica. Pequenos ajustes podem levar Ã  excelÃªncia.';
-    else if(d.percentual>=45) levelText='HÃ¡ espaÃ§o para fortalecer este princÃ­pio no seu dia a dia.';
-    else levelText='Ponto de atenÃ§Ã£o. Reflita sobre como viver mais este valor na sua rotina.';
+    if(d.percentual>=85) levelText='Você demonstra forte alinhamento com este princípio.';
+    else if(d.percentual>=65) levelText='Bom nível de prática. Pequenos ajustes podem levar à excelência.';
+    else if(d.percentual>=45) levelText='Há espaço para fortalecer este princípio no seu dia a dia.';
+    else levelText='Ponto de atenção. Reflita sobre como viver mais este valor na sua rotina.';
 
     html+=`<div class="principle-score">
       <div class="principle-score-header">
@@ -662,9 +662,9 @@ function buildReport(r){
   document.getElementById('principleScores').innerHTML=html;
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // EXPORT PDF
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 async function exportPDF(){
   const el=document.getElementById('reportCard');
   const btn=document.querySelector('.btn-pdf');
@@ -684,7 +684,7 @@ async function exportPDF(){
     pdf.rect(0,0,pageW,20,'F');
     pdf.setTextColor(255,255,255);
     pdf.setFontSize(11);pdf.setFont(undefined,'bold');
-    pdf.text('ANDRÃ BESCHIZZA GROUP â RelatÃ³rio de ReflexÃ£o Cultural',pageW/2,13,{align:'center'});
+    pdf.text('ANDRÉ BESCHIZZA GROUP — Relatório de Reflexão Cultural',pageW/2,13,{align:'center'});
 
     let y=28;
     if(imgH<=pageH-y-margin){
@@ -707,12 +707,12 @@ async function exportPDF(){
     const nome=document.getElementById('userName').value.trim().replace(/\s+/g,'-').toLowerCase();
     pdf.save(`reflexao-cultura-${nome}-${new Date().toISOString().slice(0,10)}.pdf`);
   }catch(e){alert('Erro ao gerar PDF.');console.error(e)}
-  btn.innerHTML='&#128196; Salvar RelatÃ³rio em PDF';btn.disabled=false;
+  btn.innerHTML='&#128196; Salvar Relatório em PDF';btn.disabled=false;
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // EXPORT JSON / CSV
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 function exportJSON(){downloadBlob(new Blob([JSON.stringify(allResponses[allResponses.length-1],null,2)],{type:'application/json'}),`reflexao-individual-${getDateStr()}.json`)}
 function exportAllJSON(){downloadBlob(new Blob([JSON.stringify(allResponses,null,2)],{type:'application/json'}),`todas-respostas-${getDateStr()}.json`)}
 
@@ -740,15 +740,15 @@ function exportAllCSV(){
 function downloadBlob(b,f){const u=URL.createObjectURL(b);const a=document.createElement('a');a.href=u;a.download=f;a.click();URL.revokeObjectURL(u)}
 function getDateStr(){return new Date().toISOString().slice(0,10)}
 
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 // ADMIN
-// ââââââââââââââââââââââââââââââââââââââââââââââ
+// ══════════════════════════════════════════════
 function viewResponses(){
   const v=document.getElementById('responsesViewer');
   if(v.style.display!=='none'){v.style.display='none';return}
   if(!allResponses.length){v.innerHTML='<p style="text-align:center;color:var(--gt);padding:16px">Nenhuma resposta registrada.</p>';v.style.display='block';return}
   v.innerHTML=allResponses.map((r,i)=>{
-    let h=`<div class="resp-item"><h4>#${i+1} â ${r.nome} (${r.setor})</h4>
+    let h=`<div class="resp-item"><h4>#${i+1} — ${r.nome} (${r.setor})</h4>
     <p>${new Date(r.timestamp).toLocaleString('pt-BR')} | ${r.resumo.pontos}/${r.resumo.max} (${r.resumo.percentual}%)</p>`;
     principles.forEach(p=>{
       const d=r.principios[p.id]||{};
@@ -760,7 +760,7 @@ function viewResponses(){
 }
 
 function clearData(){
-  if(confirm('Apagar TODAS as respostas? AÃ§Ã£o irreversÃ­vel.')){
+  if(confirm('Apagar TODAS as respostas? Ação irreversível.')){
     allResponses=[];
     try{sessionStorage.removeItem('abg_resp2')}catch(e){}
     document.getElementById('totalResponses').textContent='0';
